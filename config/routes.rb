@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about',to: 'pages#about'
   #resources :articles, only: [:show]
-  resources :articles, only: [:show, :index, :new, :create]
-
+  #resources :articles, only: [:show, :index, :new, :create,:edit,:update,:destroy]
+  # exposing all the RestFul routes to article resources
+  resources :articles
 end
