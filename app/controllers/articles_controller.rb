@@ -32,6 +32,7 @@ class ArticlesController <ApplicationController
     end   
     def create
       @article = Article.new(params.require(:article).permit(:title, :description))
+      @article.user=User.first
     #   @article.save
     #   redirect_to @article
     if @article.save
